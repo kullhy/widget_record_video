@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:ffmpeg_kit_flutter_new/ffmpeg_kit.dart';
@@ -37,7 +38,10 @@ class Ultis {
     final result = await FFmpegKit.execute(command);
     final returnCode = await result.getReturnCode();
 
-    // var message = await result.getAllLogs();
+    var message = await result.getAllLogs();
+    for (var mes in message) {
+      log(mes.getMessage());
+    }
 
     if (ReturnCode.isSuccess(returnCode)) {
       return outputPath;
