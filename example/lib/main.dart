@@ -35,8 +35,9 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     // Start color change timer for the animated container
     _animationController = AnimationController(
       vsync: this,
-      duration:
-          const Duration(seconds: 3), // Set duration of the color change cycle
+      duration: const Duration(
+        seconds: 3,
+      ), // Set duration of the color change cycle
     )..repeat(); // Repeat animation infinitely
 
     // Create the color animation using a Tween
@@ -104,9 +105,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Widget Record Example App'),
-        ),
+        appBar: AppBar(title: const Text('Widget Record Example App')),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -175,10 +174,14 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                   const SizedBox(height: 10),
                   _videoController != null &&
                           _videoController!.value.isInitialized
-                      ? AspectRatio(
+                      ? Container(
+                        width: 200,
+                        height: 200,
+                        child: AspectRatio(
                           aspectRatio: _videoController!.value.aspectRatio,
                           child: VideoPlayer(_videoController!),
-                        )
+                        ),
+                      )
                       : const CircularProgressIndicator(),
                 ],
               ],

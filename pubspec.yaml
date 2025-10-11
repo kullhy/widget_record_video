@@ -13,12 +13,9 @@ dependencies:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
   path_provider: ^2.1.4
-  ffmpeg_kit_flutter_video: ^6.0.3
-  flutter_quick_video_encoder:
-    git:
-      url: https://github.com/mathieupetrini/flutter_quick_video_encoder.git
+  ffmpeg_kit_flutter_new: ^1.2.1
+  flutter_quick_video_encoder_fork: ^0.0.1
   record: ^5.2.1
-
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,6 @@
-# widget_record_video_example
+# example2
 
-Demonstrates how to use the widget_record_video plugin.
+A new Flutter project.
 
 ## Getting Started
 
